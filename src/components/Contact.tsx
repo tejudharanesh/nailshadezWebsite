@@ -193,9 +193,9 @@ const Contact = () => {
                       Business Hours
                     </h4>
                     <div className="text-muted-foreground space-y-1">
-                      <p>Monday - Friday: 10:00 AM - 7:00 PM</p>
-                      <p>Saturday: 10:00 AM - 6:00 PM</p>
-                      <p>Sunday: 11:00 AM - 5:00 PM</p>
+                      <p>Monday - Friday: 10:00 AM - 8:00 PM</p>
+                      <p>Saturday: 10:00 AM - 8:00 PM</p>
+                      <p>Sunday: 10:00 AM - 8:00 PM</p>
                     </div>
                   </div>
                 </div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import image from "../assets/services/image4.jpg";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,8 +22,8 @@ const Hero = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1604654894611-6973b183ba67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80')",
+            backgroundImage: "url(" + image,
+
             filter: "brightness(0.9)",
           }}
         ></div>
@@ -34,7 +35,7 @@ const Hero = () => {
         <div className="max-w-3xl mx-auto text-center text-white">
           {/* Small tag above heading */}
           <div
-            className={`inline-block mb-4 py-1 px-3 rounded-full bg-white/20 backdrop-blur-sm text-sm font-medium ${
+            className={`inline-block mb-4 py-1 px-3 rounded-full bg-black/30 backdrop-blur-sm text-sm font-medium ${
               isVisible ? "opacity-100 animate-slide-up" : "opacity-0"
             }`}
           >
@@ -49,7 +50,7 @@ const Hero = () => {
                 : "opacity-0"
             }`}
           >
-            Elevate Your{" "}
+            Elevate Your
             <span className="relative">
               Style
               <span className="absolute -bottom-2 left-0 w-full h-1 bg-gold-400"></span>
@@ -81,7 +82,7 @@ const Hero = () => {
             </a>
             <a
               href="#services"
-              className="btn-secondary bg-white/10 border-white/30 text-white hover:bg-white/20"
+              className="btn-secondary bg-black/30 border-white/30 text-white hover:bg-black/60"
             >
               Explore Services
             </a>

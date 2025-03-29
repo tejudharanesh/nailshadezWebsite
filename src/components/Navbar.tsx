@@ -35,7 +35,9 @@ const Navbar = () => {
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         <a
           href="#"
-          className="font-serif text-2xl text-salon-900 transition-all"
+          className={`font-serif text-2xl transition-all ${
+            isScrolled ? "text-black" : "text-white"
+          }`}
         >
           NailShadeZ
         </a>
@@ -43,31 +45,41 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-8">
           <a
             href="#home"
-            className="text-salon-900 hover:text-salon-600 transition-all"
+            className={`${
+              isScrolled ? "text-black" : "text-white"
+            } hover:text-black transition-all`}
           >
             Home
           </a>
           <a
             href="#services"
-            className="text-salon-900 hover:text-salon-600 transition-all"
+            className={`${
+              isScrolled ? "text-black" : "text-white"
+            } hover:text-black transition-all`}
           >
             Services
           </a>
           <a
             href="#gallery"
-            className="text-salon-900 hover:text-salon-600 transition-all"
+            className={`${
+              isScrolled ? "text-black" : "text-white"
+            } hover:text-black transition-all`}
           >
             Gallery
           </a>
           <a
             href="#about"
-            className="text-salon-900 hover:text-salon-600 transition-all"
+            className={`${
+              isScrolled ? "text-black" : "text-white"
+            } hover:text-black transition-all`}
           >
             About
           </a>
           <a
             href="#contact"
-            className="text-salon-900 hover:text-salon-600 transition-all"
+            className={`${
+              isScrolled ? "text-black" : "text-white"
+            } hover:text-black transition-all`}
           >
             Contact
           </a>
@@ -78,9 +90,9 @@ const Navbar = () => {
 
         <button className="md:hidden" onClick={toggleMenu}>
           {isMenuOpen ? (
-            <X className="text-salon-900" />
+            <X className="text-white" />
           ) : (
-            <Menu className="text-salon-900" />
+            <Menu className="text-white" />
           )}
         </button>
       </div>
@@ -90,35 +102,35 @@ const Navbar = () => {
         <div className="glass absolute top-full left-0 w-full py-6 px-6 flex flex-col space-y-6 md:hidden animate-fade-in">
           <a
             href="#home"
-            className="text-salon-900 hover:text-salon-600 transition-all"
+            className="text-salon-900 hover:text-black transition-all"
             onClick={toggleMenu}
           >
             Home
           </a>
           <a
             href="#services"
-            className="text-salon-900 hover:text-salon-600 transition-all"
+            className="text-salon-900 hover:text-black transition-all"
             onClick={toggleMenu}
           >
             Services
           </a>
           <a
             href="#gallery"
-            className="text-salon-900 hover:text-salon-600 transition-all"
+            className="text-salon-900 hover:text-black transition-all"
             onClick={toggleMenu}
           >
             Gallery
           </a>
           <a
             href="#about"
-            className="text-salon-900 hover:text-salon-600 transition-all"
+            className="text-salon-900 hover:text-black transition-all"
             onClick={toggleMenu}
           >
             About
           </a>
           <a
             href="#contact"
-            className="text-salon-900 hover:text-salon-600 transition-all"
+            className="text-salon-900 hover:text-black transition-all"
             onClick={toggleMenu}
           >
             Contact

@@ -14,7 +14,7 @@ const services = [
     id: 1,
     name: "Nail Art",
     description: "Custom nail art designs tailored to your style and occasion.",
-    price: "$15+",
+    price: "₹500",
     duration: "Varies",
     image: image1,
   },
@@ -23,7 +23,7 @@ const services = [
     name: "Acrylic Extensions",
     description:
       "Enhance your nails with durable acrylic extensions for a long-lasting look.",
-    price: "$75",
+    price: "₹500",
     duration: "90 mins",
     image: image2,
   },
@@ -32,7 +32,7 @@ const services = [
     name: "Gel Extensions",
     description:
       "Add length and strength to your nails with glossy gel extensions.",
-    price: "$85",
+    price: "₹500",
     duration: "90 mins",
     image: image3,
   },
@@ -41,8 +41,8 @@ const services = [
     name: "Russian Manicure and Pedicure",
     description:
       "Experience the precision of a Russian manicure and pedicure for perfectly groomed nails.",
-    price: "$95",
-    duration: "120 mins",
+    price: "₹500",
+    duration: "2 hrs",
     image: image4,
   },
   {
@@ -50,7 +50,7 @@ const services = [
     name: "Birthday Nails",
     description:
       "Celebrate your special day with customized birthday nail designs.",
-    price: "$50+",
+    price: "₹500",
     duration: "75 mins",
     image: image5,
   },
@@ -59,7 +59,7 @@ const services = [
     name: "Customized Stick-Ons",
     description:
       "Get personalized, reusable stick-on nails designed to match your style.",
-    price: "$30+",
+    price: "₹500",
     duration: "Varies",
     image: image6,
   },
@@ -67,7 +67,7 @@ const services = [
     id: 7,
     name: "French Nails",
     description: "A timeless French manicure for a classic and elegant look.",
-    price: "$40",
+    price: "₹500",
     duration: "60 mins",
     image: image7,
   },
@@ -76,7 +76,7 @@ const services = [
     name: "Eyelash Extensions",
     description:
       "Add volume and length to your natural lashes with semi-permanent eyelash extensions.",
-    price: "$120",
+    price: "₹500",
     duration: "90 mins",
     image: image8,
   },
@@ -85,7 +85,7 @@ const services = [
     name: "Eyelash Training",
     description:
       "Learn the art of eyelash extension application with our professional training course.",
-    price: "$500",
+    price: "₹500",
     duration: "6 Hours",
     image: image9,
   },
@@ -167,9 +167,6 @@ const Services = () => {
                     {service.name}
                   </h3>
                   <div className="flex flex-col items-end">
-                    <span className="text-lg font-medium text-salon-800">
-                      {service.price}
-                    </span>
                     <span className="text-sm text-muted-foreground">
                       {service.duration}
                     </span>
