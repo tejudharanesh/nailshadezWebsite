@@ -90,16 +90,16 @@ const Navbar = () => {
 
         <button className="md:hidden" onClick={toggleMenu}>
           {isMenuOpen ? (
-            <X className="text-white" />
+            <X className="text-white bg-black" />
           ) : (
-            <Menu className="text-white" />
+            <Menu className="text-black" />
           )}
         </button>
       </div>
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="glass absolute top-full left-0 w-full py-6 px-6 flex flex-col space-y-6 md:hidden animate-fade-in">
+        <div className="bg-white absolute top-full left-0 w-full py-6 px-6 flex flex-col space-y-6 md:hidden animate-fade-in">
           <a
             href="#home"
             className="text-salon-900 hover:text-black transition-all"
