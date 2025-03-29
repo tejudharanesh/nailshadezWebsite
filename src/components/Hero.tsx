@@ -61,7 +61,7 @@ const Hero = () => {
       </div>
       
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
         <span className="text-white text-sm mb-2">Scroll Down</span>
         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center p-1">
           <div className="w-1 h-2 bg-white rounded-full animate-bounce"></div>

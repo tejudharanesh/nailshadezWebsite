@@ -1,55 +1,56 @@
-
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from "react";
+import image1 from "../assets/image.jpg";
 
 const services = [
   {
     id: 1,
     name: "Classic Manicure",
-    description: "Our signature manicure includes nail shaping, cuticle care, hand massage, and polish application.",
+    description:
+      "Our signature manicure includes nail shaping, cuticle care, hand massage, and polish application.",
     price: "$35",
     duration: "45 mins",
-    image: "https://images.unsplash.com/photo-1604654894611-6973b183ba67?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    image:
+      "https://images.unsplash.com/photo-1604654894611-6973b183ba67?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 2,
     name: "Luxury Pedicure",
-    description: "A rejuvenating treatment featuring a warm foot soak, exfoliation, nail care, and a relaxing massage.",
+    description:
+      "A rejuvenating treatment featuring a warm foot soak, exfoliation, nail care, and a relaxing massage.",
     price: "$55",
     duration: "60 mins",
-    image: "https://images.unsplash.com/photo-1610992013803-575aaef1e3c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    image:
+      "https://images.unsplash.com/photo-1610992013803-575aaef1e3c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 3,
     name: "Gel Polish",
-    description: "Long-lasting, chip-resistant polish that gives your nails a glossy finish for up to two weeks.",
+    description:
+      "Long-lasting, chip-resistant polish that gives your nails a glossy finish for up to two weeks.",
     price: "$45",
     duration: "60 mins",
-    image: "https://images.unsplash.com/photo-1601051297657-f12aa1200a884?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    image: image1,
   },
   {
     id: 4,
     name: "Nail Art Design",
-    description: "Express your personality with custom nail art, from simple accents to elaborate designs.",
+    description:
+      "Express your personality with custom nail art, from simple accents to elaborate designs.",
     price: "$15+",
     duration: "Varies",
-    image: "https://images.unsplash.com/photo-1607779097040-f06a551d7f43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    image:
+      "https://images.unsplash.com/photo-1607779097040-f06a551d7f43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
   },
   {
     id: 5,
     name: "Nail Extensions",
-    description: "Enhance your natural nails with acrylics, gels, or tips for added length and strength.",
+    description:
+      "Enhance your natural nails with acrylics, gels, or tips for added length and strength.",
     price: "$75",
     duration: "90 mins",
-    image: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    image:
+      "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
   },
-  {
-    id: 6,
-    name: "Spa Package",
-    description: "Indulge in our comprehensive spa package including manicure, pedicure, and paraffin treatment.",
-    price: "$120",
-    duration: "2 hours",
-    image: "https://images.unsplash.com/photo-1632345031435-8727f6897d53?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-  }
 ];
 
 const Services = () => {
@@ -61,8 +62,8 @@ const Services = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const id = Number(entry.target.getAttribute('data-id'));
-            setVisibleServices((prev) => 
+            const id = Number(entry.target.getAttribute("data-id"));
+            setVisibleServices((prev) =>
               prev.includes(id) ? prev : [...prev, id]
             );
           }
@@ -94,7 +95,8 @@ const Services = () => {
             Premium Nail Services
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
-            Discover our comprehensive range of nail services designed to pamper, beautify, and rejuvenate.
+            Discover our comprehensive range of nail services designed to
+            pamper, beautify, and rejuvenate.
           </p>
         </div>
 
@@ -107,8 +109,8 @@ const Services = () => {
               data-id={service.id}
               className={`bg-white border border-muted rounded-lg overflow-hidden transition-all duration-500 shadow-sm hover:shadow-md ${
                 visibleServices.includes(service.id)
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-10'
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
               }`}
               style={{
                 transitionDelay: `${(index % 3) * 100}ms`,
@@ -141,7 +143,7 @@ const Services = () => {
               </div>
               <div className="px-6 pb-6">
                 <button className="w-full py-2 border-2 border-salon-500 text-salon-500 font-medium rounded-md transition-all hover:bg-salon-500 hover:text-white">
-                  Book Now
+                  Upcoming
                 </button>
               </div>
             </div>

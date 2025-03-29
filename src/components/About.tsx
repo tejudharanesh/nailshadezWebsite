@@ -56,26 +56,26 @@ const About = () => {
             </span>
             <h2 className="section-heading">Our Story</h2>
             <p className="text-muted-foreground mb-6">
-              Founded in 2015, Alkasthe Nail Bar was born from a passion for artistry and a desire to create a sanctuary where clients could escape, relax, and emerge refreshed with beautiful nails.
+              Founded in 2025, NailShadeZ was born from a passion for artistry and a desire to create a sanctuary where clients could escape, relax, and emerge refreshed with beautiful nails.
             </p>
             <p className="text-muted-foreground mb-6">
               Our team consists of skilled technicians who are constantly updating their techniques to provide you with the latest trends and innovations in nail care.
             </p>
             <div className="grid grid-cols-2 gap-6 mb-8">
               <div className="flex flex-col">
-                <span className="text-3xl font-serif text-salon-500 font-medium">7+</span>
+                <span className="text-3xl font-serif text-salon-500 font-medium">1+</span>
                 <span className="text-sm text-muted-foreground">Years of Experience</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-3xl font-serif text-salon-500 font-medium">15k+</span>
+                <span className="text-3xl font-serif text-salon-500 font-medium">10k+</span>
                 <span className="text-sm text-muted-foreground">Happy Clients</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-3xl font-serif text-salon-500 font-medium">12</span>
+                <span className="text-3xl font-serif text-salon-500 font-medium">1</span>
                 <span className="text-sm text-muted-foreground">Skilled Artists</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-3xl font-serif text-salon-500 font-medium">50+</span>
+                <span className="text-3xl font-serif text-salon-500 font-medium">100+</span>
                 <span className="text-sm text-muted-foreground">Nail Designs</span>
               </div>
             </div>
