@@ -1,55 +1,93 @@
 import React, { useEffect, useRef, useState } from "react";
-import image1 from "../assets/image.jpg";
+import image1 from "../assets/services/image1.jpg";
+import image2 from "../assets/services/image2.jpg";
+import image3 from "../assets/services/image3.jpg";
+import image4 from "../assets/services/image4.jpg";
+import image5 from "../assets/services/image5.jpg";
+import image6 from "../assets/services/image6.webp";
+import image7 from "../assets/services/image7.jpg";
+import image8 from "../assets/services/image8.jpg";
+import image9 from "../assets/services/image9.jpg";
 
 const services = [
   {
     id: 1,
-    name: "Classic Manicure",
-    description:
-      "Our signature manicure includes nail shaping, cuticle care, hand massage, and polish application.",
-    price: "$35",
-    duration: "45 mins",
-    image:
-      "https://images.unsplash.com/photo-1604654894611-6973b183ba67?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-  },
-  {
-    id: 2,
-    name: "Luxury Pedicure",
-    description:
-      "A rejuvenating treatment featuring a warm foot soak, exfoliation, nail care, and a relaxing massage.",
-    price: "$55",
-    duration: "60 mins",
-    image:
-      "https://images.unsplash.com/photo-1610992013803-575aaef1e3c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-  },
-  {
-    id: 3,
-    name: "Gel Polish",
-    description:
-      "Long-lasting, chip-resistant polish that gives your nails a glossy finish for up to two weeks.",
-    price: "$45",
-    duration: "60 mins",
+    name: "Nail Art",
+    description: "Custom nail art designs tailored to your style and occasion.",
+    price: "$15+",
+    duration: "Varies",
     image: image1,
   },
   {
-    id: 4,
-    name: "Nail Art Design",
+    id: 2,
+    name: "Acrylic Extensions",
     description:
-      "Express your personality with custom nail art, from simple accents to elaborate designs.",
-    price: "$15+",
-    duration: "Varies",
-    image:
-      "https://images.unsplash.com/photo-1607779097040-f06a551d7f43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      "Enhance your nails with durable acrylic extensions for a long-lasting look.",
+    price: "$75",
+    duration: "90 mins",
+    image: image2,
+  },
+  {
+    id: 3,
+    name: "Gel Extensions",
+    description:
+      "Add length and strength to your nails with glossy gel extensions.",
+    price: "$85",
+    duration: "90 mins",
+    image: image3,
+  },
+  {
+    id: 4,
+    name: "Russian Manicure and Pedicure",
+    description:
+      "Experience the precision of a Russian manicure and pedicure for perfectly groomed nails.",
+    price: "$95",
+    duration: "120 mins",
+    image: image4,
   },
   {
     id: 5,
-    name: "Nail Extensions",
+    name: "Birthday Nails",
     description:
-      "Enhance your natural nails with acrylics, gels, or tips for added length and strength.",
-    price: "$75",
+      "Celebrate your special day with customized birthday nail designs.",
+    price: "$50+",
+    duration: "75 mins",
+    image: image5,
+  },
+  {
+    id: 6,
+    name: "Customized Stick-Ons",
+    description:
+      "Get personalized, reusable stick-on nails designed to match your style.",
+    price: "$30+",
+    duration: "Varies",
+    image: image6,
+  },
+  {
+    id: 7,
+    name: "French Nails",
+    description: "A timeless French manicure for a classic and elegant look.",
+    price: "$40",
+    duration: "60 mins",
+    image: image7,
+  },
+  {
+    id: 8,
+    name: "Eyelash Extensions",
+    description:
+      "Add volume and length to your natural lashes with semi-permanent eyelash extensions.",
+    price: "$120",
     duration: "90 mins",
-    image:
-      "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    image: image8,
+  },
+  {
+    id: 9,
+    name: "Eyelash Training",
+    description:
+      "Learn the art of eyelash extension application with our professional training course.",
+    price: "$500",
+    duration: "6 Hours",
+    image: image9,
   },
 ];
 
@@ -101,13 +139,13 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-8">
           {services.map((service, index) => (
             <div
               key={service.id}
               ref={(el) => (serviceRefs.current[index] = el)}
               data-id={service.id}
-              className={`bg-white border border-muted rounded-lg overflow-hidden transition-all duration-500 shadow-sm hover:shadow-md ${
+              className={`bg-white flex flex-col justify-between border border-muted rounded-lg overflow-hidden transition-all duration-500 shadow-sm hover:shadow-md ${
                 visibleServices.includes(service.id)
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"
@@ -123,7 +161,7 @@ const Services = () => {
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-2 md:p-6">
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="font-serif text-xl font-medium text-salon-900">
                     {service.name}
@@ -142,7 +180,7 @@ const Services = () => {
                 </p>
               </div>
               <div className="px-6 pb-6">
-                <button className="w-full py-2 border-2 border-salon-500 text-salon-500 font-medium rounded-md transition-all hover:bg-salon-500 hover:text-white">
+                <button className="w-full py-2 border-2 border-salon-500 text-salon-500 font-medium rounded-md transition-al">
                   Upcoming
                 </button>
               </div>
