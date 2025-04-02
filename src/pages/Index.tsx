@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
@@ -6,8 +6,11 @@ import Gallery from "../components/Gallery";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import Booking from "../components/Booking";
 
 const Index = () => {
+  const [showBooking, setShowBooking] = useState(false);
+
   // Smooth scroll function
   useEffect(() => {
     const handleLinkClick = (e: MouseEvent) => {
@@ -80,15 +83,28 @@ const Index = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (showBooking) {
+      document.body.style.overflow = "hidden"; // Disable scrolling
+    } else {
+      document.body.style.overflow = "auto"; // Enable scrolling
+    }
+
+    return () => {
+      document.body.style.overflow = "auto"; // Cleanup when component unmounts
+    };
+  }, [showBooking]);
+
   return (
     <div className="w-full overflow-hidden">
-      <Navbar />
-      <Hero />
-      <Services />
+      <Navbar onOpenBooking={() => setShowBooking(true)} />
+      <Hero onOpenBooking={() => setShowBooking(true)} />
+      <Services onOpenBooking={() => setShowBooking(true)} />
       <Gallery />
       <About />
       <Contact />
-      <Footer />
+      <Footer onOpenBooking={() => setShowBooking(true)} />
+      <Booking isOpen={showBooking} onClose={() => setShowBooking(false)} />
     </div>
   );
 };

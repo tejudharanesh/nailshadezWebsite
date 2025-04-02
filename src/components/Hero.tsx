@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import image from "../assets/services/image4.jpg";
 
-const Hero = () => {
+const Hero = ({ onOpenBooking }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -22,8 +22,7 @@ const Hero = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url(" + image,
-
+            backgroundImage: `url(${image})`,
             filter: "brightness(0.9)",
           }}
         ></div>
@@ -77,7 +76,7 @@ const Hero = () => {
                 : "opacity-0"
             }`}
           >
-            <a href="#booking" className="btn-primary">
+            <a href="#booking" className="btn-primary" onClick={onOpenBooking}>
               Book Appointment
             </a>
             <a

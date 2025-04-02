@@ -91,7 +91,7 @@ const services = [
   },
 ];
 
-const Services = () => {
+const Services = ({ onOpenBooking }) => {
   const [visibleServices, setVisibleServices] = useState<number[]>([]);
   const serviceRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -177,8 +177,11 @@ const Services = () => {
                 </p>
               </div>
               <div className="px-6 pb-6">
-                <button className="w-full py-2 border-2 border-salon-500 text-salon-500 font-medium rounded-md transition-al">
-                  Upcoming
+                <button
+                  className="w-full py-2 border-2 border-salon-500 text-salon-500 font-medium rounded-md transition-al hover:bg-salon-500 hover:text-white"
+                  onClick={() => onOpenBooking()}
+                >
+                  Book Now
                 </button>
               </div>
             </div>

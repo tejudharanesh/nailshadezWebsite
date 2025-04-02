@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MapPinIcon } from "lucide-react";
 import { toast } from "sonner";
 
 const Contact = () => {
@@ -194,8 +194,25 @@ const Contact = () => {
                     </h4>
                     <div className="text-muted-foreground space-y-1">
                       <p>Monday - Friday: 10:00 AM - 8:00 PM</p>
-                      <p>Saturday: 10:00 AM - 8:00 PM</p>
-                      <p>Sunday: 10:00 AM - 8:00 PM</p>
+                      <p>Saturday-Sunday: 10:00 AM - 8:00 PM</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="mr-4 mt-1">
+                    <MapPinIcon className="text-salon-500 w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-salon-800 mb-1">
+                      Location
+                    </h4>
+                    <div className="text-muted-foreground space-y-1">
+                      <a
+                        href="https://maps.app.goo.gl/rKna66UaQGPLtMCUA"
+                        target="_blank"
+                      >
+                        Click here to open Google maps
+                      </a>
                     </div>
                   </div>
                 </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = ({ onOpenBooking }) => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -94,6 +94,7 @@ const Footer = () => {
                 <a
                   href="#booking"
                   className="text-salon-100 hover:text-white transition-colors text-sm"
+                  onClick={onOpenBooking}
                 >
                   Book Appointment
                 </a>
@@ -264,7 +265,7 @@ const Footer = () => {
               </p>
             </div>
 
-            <div className="mt-6">
+            <div className="mt-6 mb-2">
               <h4 className="text-lg font-medium mb-3">Business Hours</h4>
               <p className="text-salon-100 text-sm">
                 Mon - Fri: 10:00 AM - 8:00 PM
@@ -276,6 +277,12 @@ const Footer = () => {
                 Sunday: 10:00 AM - 8:00 PM
               </p>
             </div>
+
+            <a href="https://maps.app.goo.gl/rKna66UaQGPLtMCUA" target="_blank">
+              <span>Location</span>
+              <br />
+              Click here to open Google maps
+            </a>
           </div>
         </div>
 

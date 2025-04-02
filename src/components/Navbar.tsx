@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
-const Navbar = () => {
+const Navbar = ({ onOpenBooking }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -83,7 +83,7 @@ const Navbar = () => {
           >
             Contact
           </a>
-          <a href="#booking" className="btn-primary">
+          <a href="#booking" className="btn-primary" onClick={onOpenBooking}>
             Book Now
           </a>
         </div>
@@ -138,7 +138,10 @@ const Navbar = () => {
           <a
             href="#booking"
             className="btn-primary text-center"
-            onClick={toggleMenu}
+            onClick={() => {
+              toggleMenu();
+              onOpenBooking();
+            }}
           >
             Book Now
           </a>
