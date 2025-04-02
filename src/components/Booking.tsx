@@ -45,7 +45,7 @@ const Booking: React.FC<BookingProps> = ({ isOpen, onClose }) => {
     // Validate time: allow only times between 10:00 and 19:00
     const [hourStr] = formData.time.split(":");
     const hour = parseInt(hourStr, 10);
-    if (hour < 10 || hour > 20) {
+    if (hour < 10 || hour > 18) {
       setError("Please select a time between 10:00 AM and 7:00 PM.");
       return;
     }
